@@ -1,1 +1,114 @@
-Página web de Victor Garcia
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Víctor García — Data Analyst</title>
+		<meta name="description" content="CV de Víctor García - Data Analyst. Resumen, experiencia, habilidades técnicas y proyectos.">
+		<link rel="stylesheet" href="styles.css">
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Víctor García",
+			"jobTitle": "Data Analyst",
+			"url": "",
+			"sameAs": [""],
+			"worksFor": ""
+		}
+		</script>
+	</head>
+	<body>
+		<header class="hero">
+			<div class="container">
+				<h1>Víctor García</h1>
+				<p class="subtitle">Data Analyst — Transformando datos en decisiones</p>
+				<p class="contact">
+					<a href="mailto:victor@example.com">victor@example.com</a> · <a href="#contact">Contacto</a>
+				</p>
+				<div class="hero-actions">
+					<button onclick="window.print()">Imprimir / Guardar como PDF</button>
+					<a class="btn" href="cv-victor-garcia.pdf" download>Descargar CV (PDF)</a>
+				</div>
+			</div>
+		</header>
+
+		<main class="container">
+			<section id="summary">
+				<h2>Resumen</h2>
+				<p>
+					Soy Data Analyst con experiencia en limpieza y análisis de datos, visualización y generación de informes accionables.
+					Me gusta transformar datos complejos en insights claros que soporten la toma de decisiones de negocio.
+				</p>
+				<p class="note">(Reemplaza este párrafo por tu resumen personal y años de experiencia)</p>
+			</section>
+
+			<section id="skills">
+				<h2>Habilidades</h2>
+				<ul class="skills-list">
+					<li>Python (pandas, numpy)</li>
+					<li>SQL (PostgreSQL, MySQL)</li>
+					<li>Visualización (Tableau, Power BI, matplotlib, seaborn)</li>
+					<li>Estadística y experimentación</li>
+					<li>ETL y manipulación de datos</li>
+					<li>Comunicación de resultados y reporting</li>
+				</ul>
+			</section>
+
+			<section id="experience">
+				<h2>Experiencia</h2>
+				<article class="job">
+					<h3>Data Analyst — Empresa Ejemplo</h3>
+					<p class="meta">Enero 2022 — Presente · Ciudad, País</p>
+					<ul>
+						<li>Diseñé dashboards en Tableau para seguimiento de KPI, reduciendo el tiempo de reporte en un 40%.</li>
+						<li>Implementé pipelines ETL para automatizar la ingesta y limpieza de datos desde múltiples fuentes.</li>
+						<li>Colaboré con equipos de producto para definir métricas y realizar experimentos A/B.</li>
+					</ul>
+				</article>
+
+				<article class="job">
+					<h3>Analista de Datos Junior — Otra Empresa</h3>
+					<p class="meta">Junio 2020 — Dic 2021 · Ciudad, País</p>
+					<ul>
+						<li>Analicé datos de clientes para segmentación y campañas dirigidas.</li>
+						<li>Automatización de reportes mensuales con SQL y Python.</li>
+					</ul>
+				</article>
+
+				<p class="note">(Sustituye las experiencias anteriores por tus empleos reales. Mantén fechas, responsabilidades y logros cuantificados.)</p>
+			</section>
+
+			<section id="education">
+				<h2>Educación</h2>
+				<p>Grado en [Tu Titulación], Universidad [Nombre], Año de finalización</p>
+			</section>
+
+			<section id="projects">
+				<h2>Proyectos destacados</h2>
+				<ul>
+					<li><strong>Proyecto A:</strong> Dashboard de ventas con forecasting y análisis estacional.</li>
+					<li><strong>Proyecto B:</strong> Pipeline ETL para integración de datos de clientes.</li>
+				</ul>
+			</section>
+
+			<section id="contact">
+				<h2>Contacto</h2>
+				<p>Email: <a href="mailto:victor@example.com">victor@example.com</a></p>
+				<p>LinkedIn: <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener">tu-perfil</a></p>
+				<p>GitHub: <a href="https://github.com/tu-usuario" target="_blank" rel="noopener">tu-usuario</a></p>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<small>© <span id="year"></span> Víctor García — Data Analyst</small>
+			</div>
+		</footer>
+
+		<script>
+			// Rellena año en el pie
+			document.getElementById('year').textContent = new Date().getFullYear();
+		</script>
+	</body>
+</html>
