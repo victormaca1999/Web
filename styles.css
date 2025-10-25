@@ -1,49 +1,84 @@
-/* Estilos básicos para el CV */
+/* Estilos básicos para el CV — paleta azul 'datos' */
 :root{
-  --bg:#f7f8fb;
-  --card:#ffffff;
-  --accent:#0b6cf3;
-  --text:#1e293b;
-  --muted:#556677;
-  --max-width:900px;
+  --bg: #0f1724; /* fondo oscuro sutil para contraste */
+  --card: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  --accent-1: #0366d6; /* azul profundo */
+  --accent-2: #29a8ff; /* azul claro */
+  --accent-3: #7dd3fc; /* cyan claro */
+  --muted: #9fb4d6;
+  --text-light: #e6eef9;
+  --text-dark: #0b1220;
+  --glass-border: rgba(255,255,255,0.06);
+  --max-width: 980px;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 *{box-sizing:border-box}
 body{
   margin:0;
-  background:var(--bg);
-  color:var(--text);
+  background:radial-gradient(1000px 400px at 10% 10%, rgba(41,164,255,0.06), transparent), var(--bg);
+  color:var(--text-light);
   line-height:1.5;
+  -webkit-font-smoothing:antialiased;
 }
 .container{
   max-width:var(--max-width);
   margin:0 auto;
   padding:1.25rem;
 }
+
+/* Hero con patrón de datos sutil (SVG inline) */
 .hero{
-  background:linear-gradient(90deg,var(--accent),#2ea6ff 70%);
-  color:white;
+  background: linear-gradient(90deg, rgba(3,102,214,0.9), rgba(41,168,255,0.85));
+  color:var(--text-light);
   padding:2.5rem 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:'';
+  position:absolute;inset:0;pointer-events:none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='p' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='1' cy='1' r='0.8' fill='%23ffffff' fill-opacity='0.06' /%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23p)' /%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  opacity:0.35;
 }
 .hero h1{margin:0;font-size:2rem}
 .subtitle{margin:.25rem 0 1rem;opacity:.95}
 .contact a{color:rgba(255,255,255,.95)}
 .hero-actions{display:flex;gap:.5rem;align-items:center}
+
 button, .btn{
-  background:#fff;color:var(--accent);border:none;padding:.5rem .75rem;border-radius:6px;text-decoration:none;cursor:pointer;font-weight:600
+  background:linear-gradient(180deg,var(--text-light), rgba(255,255,255,0.9));
+  color:var(--accent-1);
+  border:none;padding:.5rem .9rem;border-radius:8px;text-decoration:none;cursor:pointer;font-weight:700;box-shadow:0 6px 18px rgba(3,102,214,0.12)
 }
 .btn{display:inline-block}
 
 main{padding:1rem 0}
-section{background:var(--card);padding:1rem;border-radius:8px;margin-bottom:1rem;box-shadow:0 1px 3px rgba(16,24,40,.06)}
-section h2{margin-top:0;color:var(--accent)}
+section{
+  background:var(--card);
+  padding:1rem;border-radius:12px;margin-bottom:1rem;
+  box-shadow:0 8px 30px rgba(2,6,23,0.6);
+  border:1px solid var(--glass-border);
+}
+section h2{margin-top:0;color:var(--accent-2);display:flex;align-items:center;gap:.5rem}
+
+/* Chips de habilidades con efecto 'data' */
 .skills-list{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
-.skills-list li{background:#f1f7ff;padding:.4rem .6rem;border-radius:6px;color:var(--accent);font-weight:600}
+.skills-list li{
+  background:linear-gradient(90deg, rgba(41,168,255,0.12), rgba(3,102,214,0.06));
+  padding:.45rem .7rem;border-radius:999px;color:var(--text-light);font-weight:700;font-size:.95rem;backdrop-filter: blur(4px);
+  border:1px solid rgba(255,255,255,0.04);
+}
+
 .job + .job{margin-top:.75rem}
 .meta{color:var(--muted);font-size:.9rem;margin-bottom:.5rem}
 .note{color:var(--muted);font-size:.9rem}
 
 .footer{padding:1rem 0;text-align:center;color:var(--muted)}
+
+/* Pequeños acentos en listas y proyectos */
+ul li{margin-bottom:.4rem}
+ul li strong{color:var(--accent-3)}
 
 /* Responsive */
 @media (min-width:900px){
@@ -57,5 +92,5 @@ section h2{margin-top:0;color:var(--accent)}
   .hero{background:none;color:black}
   .container{padding:0}
   .hero-actions, .contact a[href^="http"]{display:none}
-  section{box-shadow:none;border-radius:0}
+  section{box-shadow:none;border-radius:0;border:0}
 }
