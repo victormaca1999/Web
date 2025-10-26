@@ -7,6 +7,15 @@ Archivos:
 - `styles.css` — Estilos y diseño responsive.
 - `cv-victor-garcia.pdf` — (opcional) Coloca aquí tu CV en PDF si quieres que el enlace "Descargar CV (PDF)" funcione.
 
+Portfolio
+---------
+
+He añadido una sección `Portfolio` en `index.html` con tarjetas de ejemplo para tus proyectos (dashboard, pipeline ETL, notebooks). Para personalizar:
+
+- Sustituye los enlaces `https://github.com/tu-usuario/...` por tus repositorios reales.
+- Añade enlaces a demos o dashboards públicos cuando existan.
+- Si quieres miniaturas, coloca imágenes en la carpeta y actualiza los artículos `.project-card` con un elemento `<img>`.
+
 Cómo usar
 
 1. Abrir en el navegador (macOS):

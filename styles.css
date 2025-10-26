@@ -94,3 +94,26 @@ ul li strong{color:var(--accent-3)}
   .hero-actions, .contact a[href^="http"]{display:none}
   section{box-shadow:none;border-radius:0;border:0}
 }
+
+/* Portfolio grid */
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1rem;
+  margin-top:.5rem;
+}
+.project-card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.04);
+}
+.project-card h3{margin:.1rem 0 .4rem}
+.project-card p{margin:.3rem 0;color:var(--muted)}
+.project-links a{color:var(--accent-2);font-weight:700;text-decoration:none}
+
+@media (min-width:720px){
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:1100px){
+  .portfolio-grid{grid-template-columns:repeat(3,1fr)}
+}
+
